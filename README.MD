@@ -1,4 +1,4 @@
-#MicroProgram Instruction Fields (36 bits)
+# MicroProgram Instruction Fields (36 bits)
 - ALU(3b) => aluCtrl(3b)
 - ALUSrc1(2b) => aluSrcA(2b)
 - ALUSrc2(3b) => aluSrcB(3b)
@@ -11,13 +11,13 @@
 - ExceptionCtrl(3b) => CauseSet(1b), CauseWr(1b), EPCWr(1b)
 - AddrCtrl(3b) => AddrCtrl(3b)
 
-#MicroProgram Instruction format
+# MicroProgram Instruction format
 - Total length = 36bits
 ```
 aluCtrl(3b)_aluSrcA(2b)_aluSrcB(3b)_RegCtrl(6b)_mAdderCtrl(1b)_hiCtrl(3b)_loCtrl(3b)_MemCtrl(4b)_PCCtrl(5b)_ExceptionCtrl(3b)_AddrCtrl(3b)
 ```
 
-#ALU controls
+# ALU controls
 - add = 000
 - sub = 001
 - mult = 010
@@ -25,11 +25,11 @@ aluCtrl(3b)_aluSrcA(2b)_aluSrcB(3b)_RegCtrl(6b)_mAdderCtrl(1b)_hiCtrl(3b)_loCtrl
 - sll = 100
 - or = 101
 
-#mALU controls
+# mALU controls
 - add = 0
 - sub = 1
 
-#memtoReg controls
+# memtoReg controls
 - aluOut0 = 000
 - MDR = 001
 - PC = 010
@@ -37,24 +37,24 @@ aluCtrl(3b)_aluSrcA(2b)_aluSrcB(3b)_RegCtrl(6b)_mAdderCtrl(1b)_hiCtrl(3b)_loCtrl
 - Hi = 100
 - Lo = 101
 
-#regDst controls
+# regDst controls
 - RegRd = 00
 - RegRt = 01
 - RedR31 = 10
 
-#PCSrc controls
+# PCSrc controls
 - aluOut0 = 000
 - BTA = 001
 - jump target address = 010
 - RegRs = 011
 - Exception Handling Routine = 100
 
-#ExceptionCtrl bits
+# ExceptionCtrl bits
 - CauseSet(1b) selects the input of the cause register. Given to a 2x1 MUX.
 - CauseWr(1b) Write signal for cause register.
 - EPCWr(1b) Write signal for EPC register.
 
-#AddrCtrl values
+# AddrCtrl values
 - sequential = 000
 - fetch = 001
 - WriteBack(ADD) = 010
@@ -63,7 +63,7 @@ aluCtrl(3b)_aluSrcA(2b)_aluSrcB(3b)_RegCtrl(6b)_mAdderCtrl(1b)_hiCtrl(3b)_loCtrl
 - Dispatch Table 3 = 101
 - Dispatch Table 4 = 110 
 
-#Sequence of Instructions in Testbench
+# Sequence of Instructions in Testbench
 note : For I-type and J-type Instruction "funcField" is set to don't care values.
 - mfhi
 - mflo
@@ -89,7 +89,7 @@ note : For I-type and J-type Instruction "funcField" is set to don't care values
 - ori
 - Undefined Instruction
 
-#MicroProgram Instruction entries fetched from "microinstructions.tv" file
+# MicroProgram Instruction entries fetched from "microinstructions.tv" file
 ```
 000_00_000_xxxxx0_x_xx0_xx0_0101_10000_x00_000  //IF
 000_00_010_xxxxx0_x_xx0_xx0_xx00_00xxx_x00_011  //ID
@@ -124,7 +124,7 @@ xxx_xx_xxx_xxxxx0_x_xx0_xx0_xx00_10100_x00_001  //Update PC to exception handlin
 xxx_xx_xxx_xxxxx0_x_xx0_xx0_xx00_00xxx_110_111  //Overflow detected Update cause register
 ```
 
-#Dispatch Table 1 entries fetched from "dispatchtable1.tv" file
+# Dispatch Table 1 entries fetched from "dispatchtable1.tv" file
 ```
 000000_000000_00000000000000000000000000010001  //number of entries
 000000_010000_00000000000000000000000000000010  //mfhi EX/WB
@@ -150,7 +150,7 @@ xxx_xx_xxx_xxxxx0_x_xx0_xx0_xx00_00xxx_110_111  //Overflow detected Update cause
 001101_xxxxxx_00000000000000000000000000010100  //ori EX
 ```
 
-#Dispatch Table 2 entries fetched from "dispatchtable2.tv" file
+# Dispatch Table 2 entries fetched from "dispatchtable2.tv" file
 ```
 000000_000000_00000000000000000000000000000011  //number of entries
 000000_011000_00000000000000000000000000010001  //mult WB
@@ -158,7 +158,7 @@ xxx_xx_xxx_xxxxx0_x_xx0_xx0_xx00_00xxx_110_111  //Overflow detected Update cause
 011100_000100_00000000000000000000000000010111  //msub WB
 ```
 
-#Dispatch Table 3 entries fetched from "dispatchtable3.tv" file
+# Dispatch Table 3 entries fetched from "dispatchtable3.tv" file
 ```
 000000_000000_00000000000000000000000000000011  //number of entries
 001000_xxxxxx_00000000000000000000000000010101  //addi WB
@@ -166,7 +166,7 @@ xxx_xx_xxx_xxxxx0_x_xx0_xx0_xx00_00xxx_110_111  //Overflow detected Update cause
 101011_xxxxxx_00000000000000000000000000011010  //sw WB
 ```
 
-#Dispatch Table 4 entries fetched from "dispatchtable4.tv" file
+# Dispatch Table 4 entries fetched from "dispatchtable4.tv" file
 ```
 000000_000000_00000000000000000000000000000010    //number of entries
 000000_100000_00000000000000000000000000011110    //add overflow
