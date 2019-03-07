@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="G:/Xilinx/projects/MicroprogrammedControlUnit2/TopModuleTest_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TopModuleTest" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="6" />
+   <wave_markers>
+      <marker time="0" label="" />
+      <marker time="60000000" label="" />
+      <marker time="120000000" label="" />
+      <marker time="180000000" label="" />
+      <marker time="240000000" label="" />
+      <marker time="300000000" label="" />
+      <marker time="360000000" label="" />
+      <marker time="420000000" label="" />
+      <marker time="480000000" label="" />
+      <marker time="540000000" label="" />
+      <marker time="600000000" label="" />
+      <marker time="680000000" label="" />
+      <marker time="820000000" label="" />
+      <marker time="900000000" label="" />
+      <marker time="980000000" label="" />
+      <marker time="1060000000" label="" />
+      <marker time="1140000000" label="" />
+      <marker time="1220000000" label="" />
+      <marker time="1300000000" label="" />
+      <marker time="1380000000" label="" />
+      <marker time="1480000000" label="" />
+      <marker time="1560000000" label="" />
+      <marker time="1640000000" label="" />
+      <marker time="1740000000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/TopModuleTest/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopModuleTest/opcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode[5:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopModuleTest/funcfield" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">funcfield[5:0]</obj_property>
+      <obj_property name="ObjectShortName">funcfield[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopModuleTest/uut/curr_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">curr_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_addr[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopModuleTest/uut/microInstruction" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">microInstruction[35:0]</obj_property>
+      <obj_property name="ObjectShortName">microInstruction[35:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopModuleTest/overflow" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">overflow</obj_property>
+      <obj_property name="ObjectShortName">overflow</obj_property>
+   </wvobject>
+</wave_config>
